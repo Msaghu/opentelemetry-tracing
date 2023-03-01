@@ -1,0 +1,20 @@
+##Prerequisites
+1. Docker desktop should be installed on your laptop and should be running for the course of this lab/test
+
+##Steps
+- We will be running a container so that we can access the backend 
+- Create a directory and go into it and create another directory.
+```
+mkdir development
+cd development
+mkdir opentelemetry-starting
+cd opentelemetry-starting
+```
+- To configure/instrument our application so that we can have our observability tool, we will paste the following:
+``` 
+docker run --rm -d -p 9411:9411 --name zipkin openzipkin/zipkin
+```
+- We will install a package JSON file to make it easier for others to manage the packages required
+```npm init```
+
+-
